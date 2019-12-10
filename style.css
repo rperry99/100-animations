@@ -25,6 +25,8 @@ h1 {
 .description {
   font-size: 1.3rem;
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 #animations {
@@ -70,9 +72,7 @@ a {
   text-decoration: none;
   padding: 20px 0;
 }
-
-.bouncing-dots .dots,
-.bouncing-dots2 .dots {
+.animation-container {
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -80,6 +80,7 @@ a {
   justify-content: space-around;
   height: calc(100% - 50px);
 }
+
 .bouncing-dots .dots .dot,
 .bouncing-dots2 .dots .dot {
   background: #535353;
@@ -108,5 +109,68 @@ a {
   }
   100% {
     transform: translateY(10px);
+  }
+}
+
+.color-wheel .wheel .spoke {
+  border: solid 30px white;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border-top-color: #6e3667;
+  border-right-color: #88d317;
+  border-bottom-color: #6e3667;
+  border-left-color: #88d317;
+  animation: colorWheel 0.75s infinite cubic-bezier(0.46, 0.62, 0, 0.74);
+}
+
+@keyframes colorWheel {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.color-wheel2 .wheel .spoke {
+  border: solid 30px white;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border-top-color: #6e3667;
+  border-right-color: #88d317;
+  border-bottom-color: #6e3667;
+  border-left-color: #88d317;
+  animation: breathingColorWheel 2s infinite ease-in-out alternate;
+}
+@keyframes breathingColorWheel {
+  100% {
+    transform: scale(0.7) rotate(360deg);
+  }
+}
+
+.eyes .eyeballs .eye {
+  height: 30px;
+  width: 30px;
+  background: white;
+  border-top-left-radius: 70%;
+  border-bottom-right-radius: 70%;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyes .eyeballs .eye .pupil {
+  height: 10px;
+  width: 10px;
+  background: black;
+  border-radius: 100%;
+  animation: tickingEyes 1.5s infinite ease-in-out alternate;
+}
+@keyframes tickingEyes {
+  0% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(-5px, 5px);
   }
 }
