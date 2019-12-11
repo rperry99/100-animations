@@ -17,3 +17,9 @@ This page is meant to be practice for me to do 100 different loading animations.
 - #3: Color Wheel
 - #4: Breathing Wheel
 - #5: Shifty Eyes
+
+---
+
+### 12/10/19
+
+- #6: Pokeball
