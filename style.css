@@ -1,12 +1,11 @@
-/* Color Scheme
-    - Violet: #6e3667
-    - Electric Lime: #88d317
-    - Deep Plum: #1A0315
-    - Shadow: #535353
-*/
-
+/* Import Font and Style Sheets */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import "styles/01_02_Dots.css";
+@import "styles/03_04_Color_Wheel.css";
+@import "styles/05_Eyes.css";
+@import "styles/06_Pokeball.css";
 
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -80,146 +79,4 @@ a {
   align-items: center;
   justify-content: space-around;
   height: calc(100% - 50px);
-}
-
-.bouncing-dots .dots .dot,
-.bouncing-dots2 .dots .dot {
-  background: #535353;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  animation: bouncing-dots 1s infinite;
-}
-.bouncing-dots .dots :nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.bouncing-dots2 .dots :nth-child(2) {
-  animation-delay: 0.2s;
-}
-.bouncing-dots2 .dots :nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes bouncing-dots {
-  0% {
-    transform: translateY(10px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(10px);
-  }
-}
-
-.color-wheel .wheel .spoke {
-  border: solid 30px white;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-  border-top-color: #6e3667;
-  border-right-color: #88d317;
-  border-bottom-color: #6e3667;
-  border-left-color: #88d317;
-  animation: colorWheel 0.75s infinite cubic-bezier(0.46, 0.62, 0, 0.74);
-}
-
-@keyframes colorWheel {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.color-wheel2 .wheel .spoke {
-  border: solid 30px white;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-  border-top-color: #6e3667;
-  border-right-color: #88d317;
-  border-bottom-color: #6e3667;
-  border-left-color: #88d317;
-  animation: breathingColorWheel 2s infinite ease-in-out alternate;
-}
-@keyframes breathingColorWheel {
-  100% {
-    transform: scale(0.7) rotate(360deg);
-  }
-}
-
-.eyes .eyeballs .eye {
-  height: 30px;
-  width: 30px;
-  background: white;
-  border-top-left-radius: 70%;
-  border-bottom-right-radius: 70%;
-  transform: rotate(45deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.eyes .eyeballs .eye .pupil {
-  height: 10px;
-  width: 10px;
-  background: black;
-  border-radius: 100%;
-  animation: tickingEyes 1.5s infinite ease-in-out alternate;
-}
-@keyframes tickingEyes {
-  0% {
-    transform: translate(5px, -5px);
-  }
-  100% {
-    transform: translate(-5px, 5px);
-  }
-}
-.pokeball .animation-container .ball {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: pokeball 1s infinite alternate;
-  transform-origin: center;
-}
-.pokeball .animation-container .ball .ball-background {
-  height: 30px;
-  width: 30px;
-  border: solid 30px white;
-  border-top-color: red;
-  border-right-color: red;
-  border-bottom-color: white;
-  border-left-color: white;
-  border-radius: 100%;
-  transform: rotate(-45deg);
-  position: absolute;
-}
-.pokeball .animation-container .ball .line {
-  height: 10px;
-  width: 60px;
-  background: black;
-  position: absolute;
-}
-.pokeball .animation-container .ball .circle {
-  height: 30px;
-  width: 30px;
-  background: black;
-  border-radius: 100%;
-  position: absolute;
-}
-.pokeball .animation-container .ball .inner-circle {
-  height: 15px;
-  width: 15px;
-  background: white;
-  border-radius: 100%;
-  position: absolute;
-}
-@keyframes pokeball {
-  0% {
-    transform: translateX(-10px) rotate(-15deg);
-  }
-  100% {
-    transform: translateX(10px) rotate(15deg);
-  }
 }

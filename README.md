@@ -23,3 +23,9 @@ This page is meant to be practice for me to do 100 different loading animations.
 ### 12/10/19
 
 - #6: Pokeball
+
+---
+
+#### 12/11/19
+
+- Separate the CSS into separate files per animation. The CSS file was starting to get out of control.
