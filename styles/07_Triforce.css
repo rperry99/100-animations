@@ -1,0 +1,8 @@
+.triforce-piece {
+  height: 0;
+  width: 0;
+  border: solid 30px gold;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
