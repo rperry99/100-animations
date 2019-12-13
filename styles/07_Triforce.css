@@ -1,8 +1,37 @@
+.triforce .animation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatingTriforce 1.5s ease-in-out infinite alternate 0.5s;
+  background: none;
+}
 .triforce-piece {
   height: 0;
   width: 0;
   border: solid 30px gold;
+  border-left-width: 20px;
+  border-right-width: 20px;
   border-left-color: transparent;
   border-right-color: transparent;
   border-top-color: transparent;
+  position: absolute;
+}
+.triforce .animation-container :nth-child(1) {
+  transform: translate(0, -30px);
+  z-index: 3;
+}
+.triforce .animation-container :nth-child(2) {
+  transform: translate(20px, 0px);
+}
+.triforce .animation-container :nth-child(3) {
+  transform: translate(-20px, 0px);
+}
+
+@keyframes floatingTriforce {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
