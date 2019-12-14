@@ -33,28 +33,18 @@
 
 .flower .petal:nth-child(1) {
   transform: translate(0px, -10px);
-  display: inline-block;
-  z-index: 1;
 }
 .flower .petal:nth-child(2) {
   transform: translate(10px, 0);
-  display: inline-block;
-  z-index: 2;
 }
 .flower .petal:nth-child(3) {
   transform: translate(-5px, 10px);
-  display: inline-block;
-  z-index: 3;
 }
 .flower .petal:nth-child(4) {
   transform: translate(5px, 10px);
-  display: inline-block;
-  z-index: 4;
 }
 .flower .petal:nth-child(5) {
   transform: translate(-10px, 0);
-  display: inline-block;
-  z-index: 1;
 }
 
 .ground {
