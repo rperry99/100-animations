@@ -1,0 +1,95 @@
+.pikmin .animation-container {
+  display: block;
+  position: relative;
+  height: 80%;
+}
+.flower {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 45%;
+  animation: twistingFlower 1.5s ease-in-out infinite alternate;
+  z-index: 5999999;
+}
+
+.flower .petal,
+.flower .center {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background: white;
+  border-radius: 100%;
+}
+
+.flower .center {
+  background: yellow;
+  height: 18px;
+  width: 18px;
+  z-index: 10;
+  border: solid 1px darkgoldenrod;
+}
+
+.flower .petal:nth-child(1) {
+  transform: translate(0px, -10px);
+  display: inline-block;
+  z-index: 1;
+}
+.flower .petal:nth-child(2) {
+  transform: translate(10px, 0);
+  display: inline-block;
+  z-index: 2;
+}
+.flower .petal:nth-child(3) {
+  transform: translate(-5px, 10px);
+  display: inline-block;
+  z-index: 3;
+}
+.flower .petal:nth-child(4) {
+  transform: translate(5px, 10px);
+  display: inline-block;
+  z-index: 4;
+}
+.flower .petal:nth-child(5) {
+  transform: translate(-10px, 0);
+  display: inline-block;
+  z-index: 1;
+}
+
+.ground {
+  height: 20px;
+  width: 100%;
+  background: forestgreen;
+  position: absolute;
+  bottom: 0;
+}
+
+.body {
+  height: 40px;
+  width: 30px;
+  border-radius: 100%;
+  background: red;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 15px);
+  transform-origin: center center;
+}
+
+.stalk {
+  height: 50px;
+  width: 6px;
+  background: red;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 3px);
+}
+
+@keyframes twistingFlower {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}

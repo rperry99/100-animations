@@ -35,3 +35,9 @@ This page is meant to be practice for me to do 100 different loading animations.
 #### 12/12/19
 
 - #7: Triforce
+
+---
+
+#### 12/13/19
+
+- #8: Red Pikmin
